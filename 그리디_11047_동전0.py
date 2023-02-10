@@ -24,6 +24,38 @@ for i in range(n):
         break
     else:
         cnt = cnt + k//coin[i]
-        k = k%coin[i]
+        k = k % coin[i]
 print(cnt)
 
+
+"""
+N, K = map(int, input().split())
+
+nlist = []
+for _ in range(N):
+    nlist.append(int(input()))
+    
+index = 0
+count = 0
+
+for _ in range(N-1):
+
+    if nlist[index] < K:
+        index = index+1
+
+    elif nlist[index] > K:
+        index -= 1
+        break
+    
+for _ in range(N):
+    
+    c = K // nlist[index]
+    count += c
+    K -= c * nlist[index]
+    index -= 1
+    
+    if K == 0:
+        break
+
+print(count)
+"""

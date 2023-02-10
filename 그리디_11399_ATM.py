@@ -25,15 +25,25 @@
 줄을 서 있는 사람의 수 N과 각 사람이 돈을 인출하는데 걸리는 시간 Pi가 주어졌을 때, 각 사람이 돈을 인출하는데 필요한 시간의 합의 최솟값을 구하는 프로그램을 작성하시오.
 """
 
-n = int(input())
-people=list(map(int, input().split()))
-people.sort()
+n=int(input())
 
-for i in range(1, n):
-    people[i]+=people[i-1]
+people=list(map(int, input().split())) # 3 1 4 3 2
+people.sort() # 1 2 3 3 4
+
+#SOL1
+for i in range(n-1):
+    people[i+1] += people[i] # 1 3 6 9 13
 
 sum=0
 for i in range(n):
-    sum+=people[i]
+    sum += people[i]
 
 print(sum)
+
+"""
+sum=0
+for i in range(n):
+    sum += people[i] * (n-i)
+    
+print(sum)
+"""
