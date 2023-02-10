@@ -8,20 +8,22 @@
    -> 그리디 사용 가능
 """
 
-n, k = map(int, input().split()) 
+
+n, k= map(int, input().split())
 coin=[]
 
 for i in range(n):
-    coin.append(int(input())) 
-coin.sort(reverse=True) # 역순 정렬: 50000, 10000, 5000, 1000, 500, 100, 50, 10, 5, 1
+    coin.append(int(input()))
+coin.sort(reverse=True)
 
-count=0
+print(coin)
+
+cnt=0
 for i in range(n):
     if k==0:
         break
-
     else:
-        count += k//coin[i] # 큰 숫자부터 집어넣어보기 
-        k %= coin[i]
-        
-print(count)
+        cnt = cnt + k//coin[i]
+        k = k%coin[i]
+print(cnt)
+

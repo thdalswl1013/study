@@ -29,10 +29,11 @@ n = int(input())
 people=list(map(int, input().split()))
 people.sort()
 
-
-result=0
-
 for i in range(1, n):
     people[i]+=people[i-1]
 
-print(sum(people))
+sum=0
+for i in range(n):
+    sum+=people[i]
+
+print(sum)
