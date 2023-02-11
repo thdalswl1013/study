@@ -66,3 +66,19 @@ for i in range(n):
     sum+=people[i]*(n-i)
 print(sum)
 """
+
+#1541 잃어버린 괄호
+
+equation=input().split('-') # ['55', '50+40']
+
+"""
+result1=0
+
+for i in equation[0].split('+'):
+    result1+=int(i)
+
+for i in equation[1:]:
+    for j in i.split('+'):
+        result-=int(j)
+
+"""
