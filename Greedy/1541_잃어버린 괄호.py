@@ -17,7 +17,6 @@ for i in array[1:]:
 print(result)
 
 
-
 """
 array=input().split('-') # ['55', '50+40']
 

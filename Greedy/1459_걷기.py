@@ -26,3 +26,4 @@ elif (x + y) % 2 == 1:
 sol3 = min(x, y)*s + (max(x, y)-min(x, y)) *w
 
 print(min(sol1, sol2, sol3))
+

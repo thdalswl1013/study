@@ -15,3 +15,23 @@ for i in range(len(length)):
     result += min * length[i] # 제일 처음에는 weight[0] * length[0]
 
 print(result)
+
+"""
+SOL2
+
+n=int(input())
+
+length=list(map(int, input().split())) # 2, 3, 1
+weight=list(map(int, input().split())) # 5, 2, 4, 1
+
+result = weight[0] * length [0]
+
+min=weight[0]
+
+for i in range(1, len(length)):
+    if min>weight[i]:
+        min = weight[i]
+    result += min * length[i]
+
+print(result)
+"""
