@@ -16,9 +16,8 @@ for i in range(len(length)):
 
 print(result)
 
+# SOL2
 """
-SOL2
-
 n=int(input())
 
 length=list(map(int, input().split())) # 2, 3, 1
