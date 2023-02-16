@@ -1,16 +1,14 @@
-import sys
-input = sys.stdin.readline
- 
-n,s,r = map(int,input().split())
-team_damaged = list(map(int,input().split()))
-team_surplus = list(map(int,input().split()))
+#어렵..
+
+n, s, r = map(int,input().split())
+team_damaged = list(map(int, input().split()))
+team_surplus = list(map(int, input().split()))
 boat = [0]*n
 
 for i in team_damaged:
     boat[i-1] -= 1
 for i in team_surplus:
     boat[i-1] += 1
-
 
 result = []
     

@@ -1,21 +1,59 @@
-from selectors import EpollSelector
-import sys
+n=int(input())
+n_list=list(map(int, input().split()))
+n_list.sort()
 
-n_mine=int(sys.stdin.readline()) # 10
-card_mine=list(map(int, sys.stdin.readline().split(' '))) # 6 3 2 10 10 10 -10 -10 7 3
+m=int(input())
+m_list=list(map(int, input().split()))
 
-n_yours=int(sys.stdin.readline()) # 8
-card_yours=list(map(int, sys.stdin.readline().split(' ')))
+def binarySearch(num, bound, start, end):    
+    while start<end:
+        middle = (start+end)//2
 
-def binarySearch(array, target, left, right):
-    middle=(left+right)//2
+        if bound==0:
+            if n_list[middle] < num:
+                start = middle + 1
+            else:
+                end = middle
 
-    if array[middle] > target:
-        right=middle - 1
+        else:
+            if n_list[middle] <= num:
+                start = middle + 1
+            else:
+                end = middle
+    return end 
+            
+result=[]
 
-    elif array[middle] < target:
-        left=middle + 1
+for i in m_list:
+    result.append(binarySearch(i, 1, 0, n) - binarySearch(i, 0, 0, n))
 
-    elif array[middle]==target:
-        return middle
+for i in range(len(result)):
+    print(result[i], end=' ')
+
+# 시간 초과
+"""
+arr=[]
+
+for i in range(m):
+    result=0
+    for j in range(n):
+        if n_list[j]==m_list[i]:
+            result+=1
+    arr.append(result)
+
+print(arr)
+"""
+
+# 시간 초과
+"""
+for i in range(m):
+    result=0
+    for j in range(n):
+        if n_list[j] == m_list[i]:
+            result+=1
+
+    print(result, end=' ')
+
+"""
+
 
