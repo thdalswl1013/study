@@ -12,8 +12,6 @@ for i in range(t):
     print(a*b // GCD(a,b))
 
 
-
-
 """
 t=int(input())
 
