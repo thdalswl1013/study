@@ -29,13 +29,19 @@ for i in range(n):
     print(sol(a))
 """
 
+# DP        
 
 n=int(input())
 
-for i in range(n):
-    a = int(input())
+for i in range(n): 
+    a = int(input()) 
 
-    dp=[0]*(a+1)
-    # print(dp)
+    dp=[0]*11
 
-    
+    dp[1]=1
+    dp[2]=2
+    dp[3]=4
+
+    for j in range(4,11):
+        dp[j]=sum(dp[j-3:j])
+    print(dp[a])
