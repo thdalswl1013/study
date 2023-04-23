@@ -1,16 +1,16 @@
-A, B = map(int, input().split())
-C = int(input())
+a, b = map(int, input().split())
+c = int(input())
 
-hour = (B+C)//60
-min = (B+C)%60
+hour = (b+c)//60
+min = (b+c)%60
 
-if(B + C >= 60):
-  if(A+hour >= 24):
-    A = A - 24
-  A = A + hour
-  print(A, min)
+if (b + c >= 60):
+  if (a+hour >= 24):
+    a = a - 24
+  a = a + hour
+  print(a, min)
 
 else:
-  if(A >= 24):
-    A = A - 24
-  print(A, B+C)
+  if(a >= 24):
+    a = a - 24
+  print(a, b+c)
