@@ -22,7 +22,7 @@ def bfs(v):
             return visited[v] # 출력 
         
         for i in (v-1, v+1, 2*v):
-            if not visited[i] and 0 <= i <= 100000:
+            if 0 <= i <= 100000 and not visited[i]:
                 visited[i] = visited[v] + 1
                 q.append(i)
 
