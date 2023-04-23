@@ -1,0 +1,1 @@
+print(ord(input())) # ord() 함수: 아스키코드 구하는 함수
