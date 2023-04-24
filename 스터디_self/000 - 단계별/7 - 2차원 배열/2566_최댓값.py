@@ -2,7 +2,6 @@ arr=[]
 
 for i in range(9):
     arr.append(list(map(int, input().split())))
-print(arr)
 
 max=-1
 x = 0
