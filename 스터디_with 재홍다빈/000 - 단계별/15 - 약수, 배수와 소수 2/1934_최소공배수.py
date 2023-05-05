@@ -15,19 +15,19 @@ for i in range(t):
 """
 t=int(input())
 
-def GreatestCommonDivision(a, b): # 최대공약수
+def GCD(a, b): # 최대공약수
     if b==0:
         return a
     else:
-        return GreatestCommonDivision(b, a%b)
+        return GCD(b, a%b)
 
-def LeastCommonMultiple(a, b): # 최소공배수
-    return (a*b) // GreatestCommonDivision(a,b)
+def LCM(a, b): # 최소공배수
+    return (a*b) // GCD(a,b)
 
 for i in range(t):
     a,b=map(int, input().split())
 
-    print(LeastCommonMultiple(a,b))
+    print(LCM(a,b))
 
 """
 

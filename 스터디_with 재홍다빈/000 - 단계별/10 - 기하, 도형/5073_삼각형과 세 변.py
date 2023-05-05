@@ -11,4 +11,3 @@ while(1):
         print("Isosceles")
     elif  a!=b and b!=c and a!=c:
         print("Scalene")
-    
