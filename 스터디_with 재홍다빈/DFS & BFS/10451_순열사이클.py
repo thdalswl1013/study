@@ -1,3 +1,25 @@
+T=int(input())
+
+def dfs(V):
+    visited[V]=1  # 방문한 곳 1로 표시
+    next=arr[V]
+    if visited[next]==0: # next가 아직 방문하지 않은 곳인 경우
+        dfs(next)
+
+for i in range(T):
+    result = 0
+    N = int(input())
+    arr = [0] + list(map(int, input().split()))
+    visited = [0] * (N + 1)
+
+    for i in range(1, N+1):
+        if visited[i]==0:
+            dfs(i)
+            result+=1
+    print(result) #순열 사이클의 개수
+
+
+
 # 런타임 에러
 """ 
 def dfs(x):
