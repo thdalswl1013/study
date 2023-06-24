@@ -1,5 +1,6 @@
 import sys
-sys.setrecursionlimit (10000)
+sys.setrecursionlimit (5000)
+input = sys.stdin.readline
 
 def dfs(start):
     visited[start] = True
