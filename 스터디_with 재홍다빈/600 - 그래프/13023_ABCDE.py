@@ -4,9 +4,8 @@ n, m = map(int, input().split())
 arr = [[] for i in range(n)]
 visited = [False] * n
 
-# 그래프를 인접 리스트 방식으로 표현하였습니다.
-for _ in range(m):
-    a, b = map(int, sys.stdin.readline().rstrip().split())
+for i in range(m):
+    a, b = map(int, input().rstrip().split())
     arr[a].append(b)
     arr[b].append(a)
 
